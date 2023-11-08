@@ -5,10 +5,14 @@ function Home() {
 
   return (
     <>
-      <div className="flex grid-flow-col">
+      <div className="flex">
         <Card/>
         <Card/>
-        <Card/> 
+        <Card/>
+        <Card/>
+        <Card/>
+        
+        
       </div>
     </>
   );

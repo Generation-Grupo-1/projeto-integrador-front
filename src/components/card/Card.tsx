@@ -3,8 +3,8 @@ function Card() {
   
     return (
       <>
-        <div className="bg-gray-300 flex justify-center ">
-          <div className="container grid grid-cols-2 text-white ">
+        <div className="bg-gray-300 flex justify-center items-center lg:h-screen">
+          <div className="container mx-auto p-4 text-white ">
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white">
               <a href="#">
                 <img
