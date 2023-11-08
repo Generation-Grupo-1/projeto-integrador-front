@@ -3,13 +3,13 @@ function Card() {
   
     return (
       <>
-        <div className="bg-gray-300 flex justify-center items-center lg:h-screen">
+        <div className="bg-gray-300 flex justify-center items-center lg:h-s">
           <div className="container mx-auto p-4 text-white ">
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white">
               <a href="#">
                 <img
                   className="p-5 rounded-t-lg"
-                 src="/apostila_matematica_basica.png"
+                  src="/apostila_matematica_basica.png"
                   alt="product image"
                 />
               </a>
