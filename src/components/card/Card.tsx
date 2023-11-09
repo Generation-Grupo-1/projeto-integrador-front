@@ -3,13 +3,13 @@ function Card() {
   
     return (
       <>
-        <div className="bg-gray-300 flex justify-center items-center lg:h-s">
-          <div className="container mx-auto p-4 text-white ">
-            <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white">
+        <div className="bg-gray-300 justify-center items-center tabela-layout:auto">
+          <div className="container mx-auto w-full  p-4 text-white ">
+            <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white">
               <a href="#">
                 <img
                   className="p-5 rounded-t-lg"
-                  src="/apostila_matematica_basica.png"
+                  src="./apostila_matematica_avancada.png"
                   alt="product image"
                 />
               </a>
@@ -66,9 +66,9 @@ function Card() {
                     4.0
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between ">
                   <span className="text-3xl font-bold text-gray-900 dark:text-cyan-500">
-                    R$59
+                    R$4.99
                   </span>
                   
                   <a

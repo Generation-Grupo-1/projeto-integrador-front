@@ -5,14 +5,19 @@ function Home() {
 
   return (
     <>
-      <div className="flex">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        
-        
+      <div className='container mx-auto p-6 grid grid-cols-4 gap-4'>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>
+        <div><Card/></div>  
       </div>
     </>
   );
