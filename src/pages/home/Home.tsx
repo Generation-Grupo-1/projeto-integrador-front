@@ -2,16 +2,14 @@
 
 
 
+
 function Home() {
   //chamando a context com o valor recebido
+  
 
     return (
     <>
-    <div className="container">
-        <h1>Home</h1>
-        
-      
-    </div>
+        <h2 className='text-5xl font-bold'>Seja bem vinde!</h2>
     
     </>
   );
