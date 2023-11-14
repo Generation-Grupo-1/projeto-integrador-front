@@ -8,6 +8,7 @@ import Apostilas from "../../pages/apostilas/Apostilas"
 import logo from "../../../src/assets/img/logo.png"
 
 
+
 function Navbar() {
 
     return (
@@ -19,7 +20,7 @@ function Navbar() {
                     <img src={logo} alt="Apostilas Educa" />
                 </Link>
                     <div className='flex gap-4 pt-2'>
-                        <Link to='./' onClick={Home} className='text-cyan-300'>Home</Link>
+                        <Link to='./' onClick={Home} className='text-cyan-300 '><i className="ri-home-4-fill"></i></Link>
                         <Link to='./login' onClick={Login} className='hover:text-cyan-300'>Login</Link>
                         <Link to='./cadastro' onClick={Cadastro} className='hover:text-cyan-300'>Cadastro</Link>
                         <Link to='./apostilas' onClick={Apostilas} className='hover:text-cyan-300'>Apostilas</Link>
