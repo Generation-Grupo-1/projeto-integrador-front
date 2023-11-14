@@ -1,3 +1,4 @@
+import Carrousel from "../../components/carrousel/Carrousel";
 
 
 
@@ -7,10 +8,9 @@ function Home() {
   //chamando a context com o valor recebido
   
 
-    return (
+  return (
     <>
-        <h2 className='text-5xl font-bold'>Seja bem vinde!</h2>
-    
+     <Carrousel />
     </>
   );
 }
