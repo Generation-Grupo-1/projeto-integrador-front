@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
+import { Link } from "react-router-dom";
+import Produto from "../../../models/Produto";
 
-interface CardProps {
-  imageSrc: string;
+interface CardProdutoProps {
+  produto: Produto;
 }
 
-const Card: React.FC <CardProps> = ({ imageSrc}) => {
+function CardProduto ({ produto } : CardProdutoProps) {
   return (
     <>
       <div className="bg-gray-300 justify-center items-center tabela-layout:auto">
@@ -14,14 +15,14 @@ const Card: React.FC <CardProps> = ({ imageSrc}) => {
             <a href="#">
               <img
                 className="p-5 rounded-t-lg"
-                src={imageSrc}
+                src={produto.imagem}
                 alt="product image"
               />
             </a>
             <div className="px-5 pb-5">
               <a href="#">
                 <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">
-                  Apostila Esducacional
+                  {produto.nome}
                 </h5>
               </a>
               <div className="flex items-center mt-2.5 mb-5">
@@ -68,12 +69,17 @@ const Card: React.FC <CardProps> = ({ imageSrc}) => {
                   <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                  4.0
+                  {produto?.avaliacao}
+                </span>
+              </div>
+              <div className="">
+                <span className="text-2xl font-bold text-gray-900 dark:text-cyan-500">
+                  {produto.quantidade}
                 </span>
               </div>
               <div className="flex items-center justify-between ">
                 <span className="text-3xl font-bold text-gray-900 dark:text-cyan-500">
-                  R$4.99
+                  R${produto.preco}
                 </span>
                 
                 <a
@@ -82,6 +88,17 @@ const Card: React.FC <CardProps> = ({ imageSrc}) => {
                 >
                   Comprar
                 </a>
+               
+                </div>
+                <div className="flex mt-6 space-x-4">
+                <Link to='' className='w-full text-white bg-indigo-400 
+                    hover:bg-indigo-800 flex items-center justify-center py-2'>
+                    <button>Editar</button>
+                  </Link>
+                  <Link to='' className='text-white bg-red-400 
+                    hover:bg-red-700 w-full flex items-center justify-center'>
+                    <button>Deletar</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -91,5 +108,5 @@ const Card: React.FC <CardProps> = ({ imageSrc}) => {
   );
 }
   
-export default Card;
+export default CardProduto;
   

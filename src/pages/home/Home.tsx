@@ -10,7 +10,9 @@ function Home() {
 
   return (
     <>
-     <Carrousel />
+      <div className="header">
+       <Carrousel />
+      </div>
     </>
   );
 }

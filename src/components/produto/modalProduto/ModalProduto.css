@@ -1,0 +1,6 @@
+.popup-content {
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}

@@ -9,8 +9,8 @@ function Header() {
       >
         <div className="container flex justify-center space-x-20 ">
              <div>Ver tudo</div>
-             <div>Matemática Básica-Intermediária-Avançada</div>
-             <div>Português Básica-Intermediária-Avançada</div>  
+             <div>Apostilas Matemática</div>
+             <div>Apostilas Português</div>  
           </div>
         </div>
     </>
