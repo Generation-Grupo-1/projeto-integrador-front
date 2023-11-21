@@ -91,11 +91,11 @@ function CardProduto ({ produto } : CardProdutoProps) {
                
                 </div>
                 <div className="flex mt-6 space-x-4">
-                <Link to='' className='w-full text-white bg-indigo-400 
+                <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 
                     hover:bg-indigo-800 flex items-center justify-center py-2'>
                     <button>Editar</button>
                   </Link>
-                  <Link to='' className='text-white bg-red-400 
+                  <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-red-400 
                     hover:bg-red-700 w-full flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>

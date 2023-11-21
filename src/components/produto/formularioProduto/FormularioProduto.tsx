@@ -76,7 +76,6 @@ function FormularioProduto() {
             ...produto,
             [e.target.name]: e.target.value,
             categoria: categoria,
-            usuario: usuario,
         });
     }
 
@@ -116,6 +115,7 @@ function FormularioProduto() {
                 })
 
                 alert('Produto cadastrado com sucesso');
+                window.location.reload();
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -131,6 +131,7 @@ function FormularioProduto() {
         setIsLoading(false)
         retornar()
     }
+  
 
     const carregandoCategoria = categoria.tipo === '';
 
@@ -205,7 +206,7 @@ function FormularioProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="comentario">Cometario do Produto</label>
+                    <label htmlFor="comentario">Comentario do Produto</label>
                     <input
                         value={produto.comentario}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}

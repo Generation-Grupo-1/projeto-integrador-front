@@ -2,10 +2,21 @@ import Popup from 'reactjs-popup';
 import FormularioProduto from '../formularioProduto/FormularioProduto';
 import 'reactjs-popup/dist/index.css';
 import './ModalProduto.css'
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 function ModalProduto() {
+
+    const { usuario } = useContext(AuthContext)
+
     return (
+
         <>
+        {console.log(usuario.tipo)}
+          { 
+                usuario.tipo === "ADMIN"? 
+
+                ( 
             <Popup
                 trigger={
                     <button 
@@ -17,6 +28,8 @@ function ModalProduto() {
             >
                 <FormularioProduto />
             </Popup>
+            ) : <div></div>
+        }
         </>
     );
 }
