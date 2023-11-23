@@ -37,10 +37,10 @@ function Login() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 text-center h-screen place-items-center font-bold ">
-        <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}  >
+      <div className="grid grid-cols-1 lg:flex-cols-2 pt-20 h-screen place-items-center font-bold">
+        <form className="flex justify-center items-center flex-col gap-4" onSubmit={login}  >
           <h2 className="text-slate-900 text-5xl ">Entrar</h2>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full text-2xl">
             <label htmlFor="usuario">Usuário</label>
             <input 
               type="text"
@@ -53,7 +53,7 @@ function Login() {
                
             />
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full text-2xl">
             <label htmlFor="senha">Senha</label>
             <input
               type="password"
@@ -88,7 +88,7 @@ function Login() {
             </Link>
           </p>
         </form>
-        <div className="fundoLogin hidden lg:block"></div>
+        <div className="fundoLogin hidden md:block"></div>
       </div>
     </>
   );

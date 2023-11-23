@@ -7,10 +7,10 @@
 }
 
 .slick-slide {
-    @apply flex items-center justify-center max-h-96 ;
+    @apply flex items-center justify-center max-h-80 ;
 }
 .slick-track {
-    @apply flex max-lg:h-1/2;
+    @apply flex ;
 }
 
 .slick-slide img {

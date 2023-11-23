@@ -1,22 +1,43 @@
 import Carrousel from "../../components/carrousel/Carrousel";
 
-
-
-
-
 function Home() {
   //chamando a context com o valor recebido
-  
 
   return (
     <>
       <div className="header">
-       <Carrousel />
+        <Carrousel />
+
+        <div className="conteudo-main">
+          <div className="font-bold text-center bg-gray-500 text-white mt-8 p-6">
+            <p className="font-serif text-2xl">
+              Desbravamos fronteiras educacionais, proporcionando acesso
+              acessível a apostilas de português e matemática.
+              Nossa missão é construir um futuro mais brilhante e igualitário
+              por meio da educação transformadora.
+              Venha conhecer nossas apostilas!
+            </p>
+          </div>
+          <div className="flex justify-center mt-5 pb-5">
+            <img
+              src={
+                "https://cdn.discordapp.com/attachments/1139577278892875776/1177325668116213811/mt1.png?ex=657218f8&is=655fa3f8&hm=52e1779434f9942704ffd383c0585af8eaabc669403f947ca603c401faee0fbd&"
+              }
+              alt="Imagem 1"
+              className="mr-40"
+            />
+
+            <img
+              src={
+                "https://cdn.discordapp.com/attachments/1139577278892875776/1177325668418195546/pt1.png?ex=657218f9&is=655fa3f9&hm=f34178409e03829cb8306f67bf07f3f99c07da88e47383418b485f59ef4f01fd&"
+              }
+              alt="Imagem 2"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
 }
-
- 
 
 export default Home;
