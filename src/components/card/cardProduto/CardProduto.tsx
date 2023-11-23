@@ -90,6 +90,7 @@ function CardProduto ({ produto } : CardProdutoProps) {
                 </a>
                
                 </div>
+
                 <div className="flex mt-6 space-x-4">
                 <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 
                     hover:bg-indigo-800 flex items-center justify-center py-2'>
@@ -100,6 +101,8 @@ function CardProduto ({ produto } : CardProdutoProps) {
                     <button>Deletar</button>
                 </Link>
               </div>
+
+              
             </div>
           </div>
         </div>

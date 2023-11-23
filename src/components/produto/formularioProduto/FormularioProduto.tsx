@@ -115,7 +115,6 @@ function FormularioProduto() {
                 })
 
                 alert('Produto cadastrado com sucesso');
-                window.location.reload();
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
