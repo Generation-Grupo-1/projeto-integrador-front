@@ -15,12 +15,15 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import FormularioProduto from './components/produto/formularioProduto/FormularioProduto';
 import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import Sobre from './pages/sobre/SobreNos';
+import { ToastContainer } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-   
-    <AuthProvider>
+ 
+  <AuthProvider>
+    <ToastContainer />
       <BrowserRouter>
           <Navbar />
             <Header />

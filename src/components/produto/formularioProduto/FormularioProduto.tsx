@@ -9,6 +9,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 function FormularioProduto() {
 
@@ -51,7 +52,7 @@ function FormularioProduto() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado');
+            toastAlerta('Você precisa estar logado',"erro");
             navigate('/');
         }
     }, [token])
@@ -95,14 +96,14 @@ function FormularioProduto() {
                     },
                 });
 
-                alert('Produto atualizado com sucesso')
+                toastAlerta('Produto atualizado com sucesso',"sucesso")
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente',"erro")
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar o Produto')
+                    toastAlerta('Erro ao atualizar o Produto',"erro")
                 }
             }
 
@@ -114,15 +115,14 @@ function FormularioProduto() {
                     },
                 })
 
-                alert('Produto cadastrado com sucesso');
+                toastAlerta('Produto cadastrado com sucesso',"sucesso");
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente',"erro")
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrar o Produto');
-                    console.log(error);
+                    toastAlerta('Erro ao cadastrar o Produto',"erro");
                 }
             }
         }

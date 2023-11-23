@@ -8,6 +8,7 @@ import { buscar } from '../../../services/Service';
 import { AuthContext } from '../../../contexts/AuthContext';
 import CardCategoria from '../cardCategoria/CardCategoria';
 import Categoria from '../../../models/Categoria';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 function ListaCategoria() {
 
@@ -25,7 +26,7 @@ function ListaCategoria() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou, favor logar novamente')
+                toastAlerta('O token expirou, favor logar novamente',"erro")
                 handleLogout()
             }
         }
@@ -33,7 +34,7 @@ function ListaCategoria() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado');
+            toastAlerta('Você precisa estar logado',"erro");
             navigate('/login');
         }
     }, [token])
@@ -55,7 +56,7 @@ function ListaCategoria() {
             />
         )}
 
-        <div className="flex justify-center w-full my-4">
+        <div className="flex justify-center w-full pt-5">
             <div className="container flex flex-col">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 

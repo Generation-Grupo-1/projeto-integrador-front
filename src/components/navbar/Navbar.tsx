@@ -4,9 +4,16 @@ import logo from "../../../src/assets/img/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
+import { toastAlerta } from "../../utils/toastAlerta";
+
 function Navbar() {
 
   const { usuario, handleLogout } = useContext(AuthContext)
+
+  const handleLogoutClick = () => {
+    handleLogout();
+    toastAlerta("Usuário deslogado com sucesso!","sucesso");
+  };
 
   return (
     <div className='flex justify-center py-1 text-white bg-black max-w-7x1 mx-auto sm:px-6 lg:px-8'>
@@ -34,7 +41,7 @@ function Navbar() {
             ?
             (<Link to='./login' className='hover:text-cyan-300'>Login</Link>)
             :
-            (<Link to='./' onClick={handleLogout} className='hover:text-red-700'>Sair</Link>)
+            (<Link to='./' onClick={handleLogoutClick} className='hover:text-red-700'>Sair</Link>)
           }
 
         </div>

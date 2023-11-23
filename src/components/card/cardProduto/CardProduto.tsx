@@ -78,8 +78,8 @@ function CardProduto({ produto }: CardProdutoProps) {
                 </span>
               </div>
               <div className="">
-                <span className="text-2xl font-bold text-gray-900 dark:text-cyan-500">
-                  {produto.quantidade}
+                <span className="text-1xl font-bold text-cyan-900 dark:text-gray-500">
+                  Qtd:{produto.quantidade}
                 </span>
               </div>
               <div className="flex items-center justify-between ">
