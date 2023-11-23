@@ -10,26 +10,22 @@ function ModalProduto() {
     const { usuario } = useContext(AuthContext)
 
     return (
-
         <>
-        {console.log(usuario.tipo)}
-          { 
-                usuario.tipo === "ADMIN"? 
-
-                ( 
-            <Popup
-                trigger={
-                    <button 
-                        className='border rounded px-4 py-2 hover:bg-cyan-300 hover:text-indigo-800'>
-                        Novo Produto
-                    </button>
-                }
-                modal
-            >
-                <FormularioProduto />
-            </Popup>
-            ) : <div></div>
-        }
+            {usuario.tipo === "ADMIN" &&
+                (
+                    <Popup
+                        trigger={
+                            <button
+                                className='border rounded px-4 py-2 hover:bg-cyan-300 hover:text-indigo-800'>
+                                Novo Produto
+                            </button>
+                        }
+                        modal
+                    >
+                        <FormularioProduto />
+                    </Popup>
+                )
+            }
         </>
     );
 }
