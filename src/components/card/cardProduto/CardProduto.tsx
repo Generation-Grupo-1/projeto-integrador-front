@@ -1,12 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom";
 import Produto from "../../../models/Produto";
+import { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 interface CardProdutoProps {
   produto: Produto;
 }
 
-function CardProduto ({ produto } : CardProdutoProps) {
+function CardProduto({ produto }: CardProdutoProps) {
+
+  const { usuario } = useContext(AuthContext)
+
   return (
     <>
       <div className="bg-gray-300 justify-center items-center tabela-layout:auto">
@@ -53,7 +58,7 @@ function CardProduto ({ produto } : CardProdutoProps) {
                 <svg
                   className="w-4 h-4 text-yellow-300 mr-1"
                   aria-hidden="true"
-                  
+
                   fill="currentColor"
                   viewBox="0 0 22 20"
                 >
@@ -62,7 +67,7 @@ function CardProduto ({ produto } : CardProdutoProps) {
                 <svg
                   className="w-4 h-4 text-gray-200 dark:text-gray-600"
                   aria-hidden="true"
-                  
+
                   fill="currentColor"
                   viewBox="0 0 22 20"
                 >
@@ -81,28 +86,31 @@ function CardProduto ({ produto } : CardProdutoProps) {
                 <span className="text-3xl font-bold text-gray-900 dark:text-cyan-500">
                   R${produto.preco}
                 </span>
-                
+
                 <a
                   href="#"
                   className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-1.5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Comprar
                 </a>
-               
-                </div>
 
+              </div>
+
+              {usuario.tipo === "ADMIN" &&
+                (
                 <div className="flex mt-6 space-x-4">
-                <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 
-                    hover:bg-indigo-800 flex items-center justify-center py-2'>
+                  <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 
+                      hover:bg-indigo-800 flex items-center justify-center py-2'>
                     <button>Editar</button>
                   </Link>
                   <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-red-400 
-                    hover:bg-red-700 w-full flex items-center justify-center'>
+                      hover:bg-red-700 w-full flex items-center justify-center'>
                     <button>Deletar</button>
-                </Link>
-              </div>
+                  </Link>
+                </div>
+                )
+              }
 
-              
             </div>
           </div>
         </div>
@@ -110,6 +118,5 @@ function CardProduto ({ produto } : CardProdutoProps) {
     </>
   );
 }
-  
+
 export default CardProduto;
-  
