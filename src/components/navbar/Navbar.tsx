@@ -27,8 +27,8 @@ function Navbar() {
           {usuario.tipo === "ADMIN" &&
             (
               <>
-                <Link to='/categoria' className='hover:underline'>Categoria</Link>
-                <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
+                <Link to='/categoria' className='hover:text-cyan-300'>Categoria</Link>
+                <Link to='/cadastroCategoria' className='hover:text-cyan-300'>Cadastrar Categoria</Link>
               </>
             )
           }

@@ -9,8 +9,8 @@ function Home() {
         <Carrousel />
 
         <div className="conteudo-main">
-          <div className="font-bold text-center bg-gray-500 text-white mt-8 p-6">
-            <p className="font-serif text-2xl">
+          <div className="font-bold text-center bg-gray-300 text-cyan-600 space-x-6 mt-8 p-6">
+            <p className="font-serif text-2xl grid grid-rows-none">
               Desbravamos fronteiras educacionais, proporcionando acesso
               acessível a apostilas de português e matemática.
               Nossa missão é construir um futuro mais brilhante e igualitário
