@@ -1,14 +1,13 @@
-import Caroussel from "../../components/carrousel/Carrousel";
+import Carrousel from "../../components/carrousel/Carrousel";
 
 
 function Home() {
-  //chamando a context com o valor recebido
-
   return (
-    <>
-      <div className="home">
-        <Caroussel />
-            
+    <> 
+      <div className="Home">
+        <div className="w-3/4 content-center mx-auto pt-5">
+        <Carrousel />
+        </div>   
         <div className="conteudo-main">
           <div className="font-bold text-center bg-gray-300 mx-20 text-cyan-600 px-20 space-x-6 mt-8 p-6">
             <p className="font-serif text-3xl grid grid-flow-row">
