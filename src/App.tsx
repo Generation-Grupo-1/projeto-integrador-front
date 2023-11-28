@@ -42,7 +42,6 @@ function App() {
                   <Route path="/editarProduto/:id" element={<FormularioProduto />} />
                   <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
                   <Route path="/sobre" element={<Sobre />} />
-
               </Routes>
             </div> 
           <Footer />

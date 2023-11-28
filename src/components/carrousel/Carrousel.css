@@ -7,7 +7,7 @@
 }
 
 .slick-slide {
-    @apply flex items-center justify-center max-h-80 ;
+    @apply flex items-center justify-center max-h-96 ;
 }
 .slick-track {
     @apply flex ;

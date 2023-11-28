@@ -15,12 +15,13 @@ const Caroussel: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    fade: true,
     autoplaySpeed: 5000,
   };
 
 
   return (
-    <div className='flex mx-auto w-4/5'>
+    <div className='flex mx-auto'>
     <Slider {...settings} className='slick-slider'>
         <div>
           <img src={Futuro} alt="" className='slick-slide' />
