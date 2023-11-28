@@ -7,18 +7,15 @@ function Home() {
     <>
       <div className="home">
         
-        <div className="flex">
-          <Carrousel />
-        </div>
-        
+      <Carrousel />
+
         <div className="conteudo-main">
           <div className="font-bold text-center bg-gray-300 mx-20 text-cyan-600 px-20 space-x-6 mt-8 p-6">
             <p className="font-serif text-3xl grid grid-flow-row">
               Desbravamos fronteiras educacionais, proporcionando acesso
-              acessível a apostilas de português e matemática.
-              Nossa missão é construir um futuro mais brilhante e igualitário
-              por meio da educação transformadora.
-              Venha conhecer nossas apostilas!
+              acessível a apostilas de português e matemática. Nossa missão é
+              construir um futuro mais brilhante e igualitário por meio da
+              educação transformadora. Venha conhecer nossas apostilas!
             </p>
           </div>
           <div className="flex justify-center mt-5 pb-5">

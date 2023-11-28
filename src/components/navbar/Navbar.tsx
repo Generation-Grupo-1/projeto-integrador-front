@@ -16,12 +16,12 @@ function Navbar() {
   };
 
   return (
-    <div className='flex justify-center py-2 text-white bg-black max-w-4x1 mx-auto sm:px-3 md:px-6 lg:px-7'>
-      <div className="container flex sm:px-4 md:px-5 lg:px-6 justify-between text-lg ">
-        <Link to="/" className="flex sm:w-5 md:w-8 lg:w-11">
-          <img src={logo} alt="Apostilas Educa" />
+    <div className='flex justify-center py-2 text-white bg-black mx-auto sm:px-3 md:px-6 lg:px-7'>
+      <div className="container flex max-w-7xl justify-between text-lg sm:px-4 md:px-5 lg:px-6">
+        <Link to="/" className="flex max-sm:w-9 max-md:w-10 lg:w-11">
+          <img src={logo} alt="Apostilas Educa" className="ml-5 sm:w-9 md:w-10 lg:w-11" />
         </Link>
-        <div className='flex gap-4 pt-2 max-w-7x1'>
+        <div className='flex gap-4 pt-2 max-w-7xl'>
           <Link to='/' className='text-cyan-300'><i className="ri-home-4-fill"></i></Link>
 
           {usuario.tipo === "ADMIN" &&
