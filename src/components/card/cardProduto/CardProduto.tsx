@@ -19,14 +19,14 @@ function CardProduto({ produto }: CardProdutoProps) {
           <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white">
             <a href="#">
               <img
-                className="p-5 rounded-t-lg im"
+                className="p-5 rounded-t-lg"
                 src={produto.imagem}
                 alt="product image"
               />
             </a>
             <div className="px-5 pb-5">
               <a href="#">
-                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">
+                <h5 className="text-xl sm:w-1/2 font-semibold tracking-tight text-gray-900 dark:text-black">
                   {produto.nome}
                 </h5>
               </a>
@@ -89,7 +89,9 @@ function CardProduto({ produto }: CardProdutoProps) {
 
                 <a
                   href="#"
-                  className="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-1.5 py-2 text-center dark:bg-sky-950 dark:hover:bg-cyan-600 dark:focus:ring-cyan-200"
+                  className="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-blue-300
+                   font-medium rounded-lg text-sm px-1.5 py-2 dark:bg-sky-950 dark:hover:bg-cyan-600
+                    dark:focus:ring-cyan-200"
                 >
                   Comprar
                 </a>

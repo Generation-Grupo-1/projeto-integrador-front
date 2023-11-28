@@ -20,6 +20,7 @@ const Caroussel: React.FC = () => {
 
 
   return (
+    <div className='flex mx-auto w-4/5'>
     <Slider {...settings} className='slick-slider'>
         <div>
           <img src={Futuro} alt="" className='slick-slide' />
@@ -31,7 +32,7 @@ const Caroussel: React.FC = () => {
           <img src={Leitura} alt=""  className='slick-slide'/>
         </div>
     </Slider>
-  
+    </div>
   );
 };
 
