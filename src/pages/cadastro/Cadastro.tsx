@@ -75,7 +75,7 @@ function Cadastro() {
       <div className="grid grid-cols-1 lg:flex-cols-2 h-screen place-items-center font-bold">
         <div className="fundoCadastro hidden "></div>
         <form className="flex justify-center items-center flex-col w-1/3 gap-3" onSubmit={cadastrarNovoUsuario}>
-          <h2 className="text-slate-900 text-5xl">Cadastrar</h2>
+          <h2 className="text-slate-900 text-5xl pt-5 font-serif">Cadastre-se</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="nome">Nome</label>
             <input
