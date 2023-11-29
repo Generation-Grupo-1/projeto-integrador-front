@@ -111,7 +111,7 @@ function FormularioCategoria() {
 
     return (
         <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
+            <h1 className="text-4xl text-center my-8 font-serif">
                 {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
             </h1>
 
@@ -122,14 +122,14 @@ function FormularioCategoria() {
                         type="text"
                         placeholder="Descreva aqui sua Categoria"
                         name='tipo'
-                        className="border-2 border-slate-700 rounded p-2"
+                        className="border-2 border-slate-700 rounded p-2 hover:border-cyan-500"
                         value={categoria.tipo}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-indigo-400 
-                    hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center" type="submit">
+                    className="rounded text-slate-100 bg-cyan-400 
+                    hover:bg-sky-950 w-1/2 py-2 mx-auto flex justify-center" type="submit">
 
                     {isLoading ?
                         <RotatingLines
